@@ -12,16 +12,15 @@ export const Main = () => {
   const [selectedNeighborhood, setSelectedNeighborhood] = useState("Bellevue")
   const [queryData, setQueryData] = useState(undefined)
 
-  const data = async ()=> {
-    return await axios.get(`https://treevention.up.railway.app/suburb_rating?suburb=${selectedNeighborhood}`)}
+  const data = async (eventValue)=> {
+    return await axios.get(`https://treevention.up.railway.app/suburb_rating?suburb=${eventValue}`)}
   
   const handleChange = async (event) => {
     setSelectedNeighborhood(event.target.value)
-    const response = await data()
+    const response = await data(event.target.value)
     console.log(response.data)
     setQueryData(response.data)
     }
-  
 
   return (
     <>
