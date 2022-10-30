@@ -17,7 +17,7 @@ export const Main = () => {
   
   const handleChange = (event) => {
     setSelectedNeighborhood(event.target.value)
-      setQueryData(data())
+      setQueryData(data().data)
     }
   
     console.log(queryData)
