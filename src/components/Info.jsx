@@ -1,22 +1,26 @@
 import React from 'react'
 import {Typography} from '@mui/material'
+import styled from "styled-components";
+
 
 export const Info = () => {
   return (
     <>
     <Typography>Overall Impact of Tree Canopy Score</Typography>
-    <div style={{display: "flex", flexDirection: "column"}}>
-
-    <div>
+    <Section>
     <Typography>Air Quality</Typography>
-    </div>
-    <div>
+    </Section>
+    <Section>
     <Typography>Safety</Typography>
-    </div>
-    <div>
+    </Section>
+    <Section>
     <Typography>Temperature</Typography>
-    </div>
-    </div>
+    </Section>
     </>
   )
 }
+const Section = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

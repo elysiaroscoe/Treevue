@@ -20,6 +20,7 @@ export const Main = () => {
     const response = await data(event.target.value)
     console.log(response.data)
     setQueryData(response.data)
+
     }
 
   return (
