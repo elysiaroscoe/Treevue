@@ -7,9 +7,7 @@ export const Widget = (props) => {
 
   return (
     <>
-
-    <Typography>{data?.name} Green Score : {data?.score}</Typography>
-
+      <Typography>{data?.suburb} Green Score : {data?.canopy}</Typography>
     </>
   )
 }
