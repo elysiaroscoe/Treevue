@@ -2,18 +2,25 @@ import React from 'react'
 import { Card,Select,FormControl, InputLabel, MenuItem } from '@mui/material'
 import { useState, useMemo } from 'react'
 import { Widget } from './Widget'
+import axios from "axios"
 
 
+const optionsList = ["Bellevue","Bridle Trails",	"Northwest Bellevue",	"BelRed",	"Downtown",	"Crossroads",	"Northeast Bellevue",	"Lake Hills",	"Wilburton",	"West Bellevue",	"Woodridge",	"West Lake Sammamish",	"Eastgate",	"Factoria",	"Newport",	"Somerset",	"Cougar Mountain / Lakemont"]
 export const Main = () => {
-  const data = useMemo(()=> {
-    return [{name: "Bellevue", score: 77}, {name: "BelRed", score: 80}]
-    }, []);
-  const [selectedNeighborhood, setSelectedNeighborhood] = useState("Bellevue")
   
-  const neighborhoodData = useMemo(()=> {
-    return data.filter((neighborhood)=> neighborhood.name === selectedNeighborhood)
-  }, [selectedNeighborhood, data])
+  const [selectedNeighborhood, setSelectedNeighborhood] = useState(optionsList[0])
+  const [queryData, setQueryData] = useState(undefined)
 
+  
+  const handleChange = (event) => {
+    setSelectedNeighborhood(event.target.value)
+    const data = async ()=> {
+      const response = await axios.get(`https://treevention.up.railway.app/suburb_rating?suburb=${selectedNeighborhood}`)
+      setQueryData(response)
+    }
+    data()
+  }
+  
 
   return (
     <>
@@ -23,13 +30,14 @@ export const Main = () => {
             <Select
               value={selectedNeighborhood}
               label="Neighborhood"
+              onChange= {handleChange}
               
             >
-              {data && data.map((neighborhood)=> {return <MenuItem value={neighborhood.name} onClick={(event)=>setSelectedNeighborhood(event.target.value)}>{neighborhood.name}</MenuItem> })}
+              {optionsList.map((neighborhood)=> {return <MenuItem style = {{height: "50px"}}key={neighborhood}value={neighborhood}>{neighborhood}</MenuItem> })}
             </Select>
         </FormControl>
       </Card>
-      {neighborhoodData && <Widget data={neighborhoodData}/>}
+      {queryData && <Widget data={queryData}/>}
     </>
   )
 }
