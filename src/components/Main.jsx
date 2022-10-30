@@ -19,6 +19,7 @@ export const Main = () => {
     setSelectedNeighborhood(event.target.value)
     const response = data()
     console.log(response)
+    setQueryData(response)
     }
   
 

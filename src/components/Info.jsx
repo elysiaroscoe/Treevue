@@ -5,6 +5,8 @@ export const Info = () => {
   return (
     <>
     <Typography>Overall Impact of Tree Canopy Score</Typography>
+    <div style={{display: "flex", flexDirection: "column"}}>
+
     <div>
     <Typography>Air Quality</Typography>
     </div>
@@ -13,6 +15,7 @@ export const Info = () => {
     </div>
     <div>
     <Typography>Temperature</Typography>
+    </div>
     </div>
     </>
   )
