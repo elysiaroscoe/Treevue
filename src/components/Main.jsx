@@ -47,4 +47,8 @@ export const Main = () => {
 
 const MainLayout = styled.div`
   flex-grow: 1;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
 `
