@@ -1,9 +1,15 @@
+import { Typography } from '@mui/material'
 import React from 'react'
-import mockAPI from "./mockAPI.json"
 
-export const Widget = () => {
+export const Widget = (props) => {
+  const {data} = props;
+
 
   return (
-    <div>{JSON.stringify(mockAPI)}</div>
+    <>
+
+    <Typography>{data?.name} Green Score : {data?.score}</Typography>
+
+    </>
   )
 }
