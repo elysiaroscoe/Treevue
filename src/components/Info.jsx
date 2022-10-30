@@ -1,6 +1,12 @@
 import React from 'react'
 import {Typography} from '@mui/material'
 import styled from "styled-components";
+import HomeIcon from '@mui/icons-material/Home';
+import AirIcon from '@mui/icons-material/Air';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
+import WaterIcon from '@mui/icons-material/Water';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
 
 
 export const Info = () => {
@@ -8,13 +14,13 @@ export const Info = () => {
     <InfoPage>
     <Typography>Overall Impact of Tree Canopy Score</Typography>
     <Section>
-      <Icon>image</Icon>
+    <Image><AirIcon/></Image>
       <Typography>Air Quality</Typography>
       <InfoSection>Trees produce oxygen, capture air pollutants such as particulate matter directly on their leaves, improve public
 health, and reduce pollution indirectly by lowering air temperatures, reducing the formation of ozone. The existing tree canopy in Bellevue removes 1,023,583 tons of air pollution annually, valued at $39,183,439</InfoSection>
     </Section>
     <Section>
-      <Icon></Icon>
+      <Image><VerifiedUserIcon/></Image>
       <Typography>Safety</Typography>
       <InfoSection>They find that for every 10 percent increase in
 tree canopy cover, there was a 15 percent decrease in the violent crime, and a 14 percent fall in the property crime
@@ -24,7 +30,8 @@ Results from our analyses showed that for every 10 percent increase in tree cano
 decrease in the violent crime rate and a 14 percent decrease the property crime rate. </InfoSection>
     </Section>
     <Section>
-      <Icon></Icon>
+      
+      <Image><MedicalInformationIcon/></Image>
       <Typography>Heat Deaths</Typography>
       <InfoSection>Trees around our region can be scalded by 100+ degree heat and intense sun because they release as much water vapor through their leaves and needles as they can to survive. You can actually feel that cool vapor around a large tree when it’s extremely hot.
 “It actually creates a microclimate.”
@@ -33,12 +40,12 @@ The transpiration in trees works exactly the same way perspiration does for a pe
 </InfoSection>
     </Section>
     <Section>
-      <Icon></Icon>
+      <Image><HomeIcon/></Image>
       <Typography>Property Value</Typography>
       <InfoSection>The proximity of healthy, beautiful trees directly affects property value. Good tree cover increased property prices by about 7% in residential areas and 18% for building lots. Quality landscapes with healthy trees can increase retail spending from 9 to 12%.</InfoSection>
     </Section>
     <Section>
-      <Icon></Icon>
+      <Image><WaterIcon/></Image>
       <Typography>Storm Water and Water</Typography>
       <InfoSection>Trees and forests mitigate stormwater runoff which minimizes flood risk, stabilizes soil, reduces sedimentation in
 streams and marshland, and absorbs pollutants, thus improving water quality and habitats.
@@ -46,7 +53,7 @@ streams and marshland, and absorbs pollutants, thus improving water quality and 
 canopy provides more than $2.8 million in stormwater runoff benefits.</InfoSection>
     </Section>
     <Section>
-      <Icon></Icon>
+      <Image><ThermostatIcon/></Image>
       <Typography>Temperature</Typography>
       <InfoSection>The net cooling effect of a young, healthy tree is equivalent to ten room-size air conditioners operating 20 hours a day. 
 If you plant a tree today on the west side of your home, in 5 years your energy bills should be 3% less. In 15 years the savings will be nearly 12%
@@ -71,7 +78,7 @@ const Section = styled.div`
   width: 100%;
   max-width: 800px;
 `
-const Icon = styled.div`
+const Image = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
