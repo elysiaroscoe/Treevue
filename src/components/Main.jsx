@@ -15,11 +15,11 @@ export const Main = () => {
   const data = async ()=> {
     return await axios.get(`https://treevention.up.railway.app/suburb_rating?suburb=${selectedNeighborhood}`)}
   
-  const handleChange = (event) => {
+  const handleChange = async (event) => {
     setSelectedNeighborhood(event.target.value)
-    const response = data()
-    console.log(response)
-    setQueryData(response)
+    const response = await data()
+    console.log(response.data)
+    setQueryData(response.data)
     }
   
 
