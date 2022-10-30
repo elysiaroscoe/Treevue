@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export const Info = () => {
   return (
-    <>
+    <InfoPage>
     <Typography>Overall Impact of Tree Canopy Score</Typography>
     <Section>
       <Icon>image</Icon>
@@ -54,15 +54,22 @@ A mature tree can often have an appraised value of between $1,000 and $10,000.
 Having large trees in yards along streets increases a home’s value from 3 percent to 15 percent. Wolf, Kathleen L, PhD, University of Washington (2007) City Trees and Property Values. Arborist News. 16, 4:34-36.
 Planting trees in cities can reduce land surface temperatures by up to 12 degrees Celsius (21.6 F) during the summer</InfoSection>
     </Section>
-    </>
+    </InfoPage>
   )
 }
 
 // Styling
+const InfoPage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 const Section = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
 `
 const Icon = styled.div`
   display: flex;

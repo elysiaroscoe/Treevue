@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Widget } from './Widget'
 import {Info} from './Info'
 import axios from "axios"
+import styled from 'styled-components'
 
 
 const optionsList = ["Bellevue","Bridle Trails",	"Northwest Bellevue",	"BelRed",	"Downtown",	"Crossroads",	"Northeast Bellevue",	"Lake Hills",	"Wilburton",	"West Bellevue",	"Woodridge",	"West Lake Sammamish",	"Eastgate",	"Factoria",	"Newport",	"Somerset",	"Cougar Mountain / Lakemont"]
@@ -24,7 +25,7 @@ export const Main = () => {
     }
 
   return (
-    <>
+    <MainLayout>
       <Card variant="outlined" style={{margin: "25px", padding: "25px"}}>
         <FormControl fullWidth>
           <InputLabel id="neighborhoods-input">Neighborhoods</InputLabel>
@@ -40,6 +41,10 @@ export const Main = () => {
       {queryData && <Widget data={queryData}/>}
       </Card>
       <Info />
-    </>
+    </MainLayout>
   )
 }
+
+const MainLayout = styled.div`
+  flex-grow: 1;
+`
