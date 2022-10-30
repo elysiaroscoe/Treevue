@@ -7,7 +7,7 @@ export const Header = () => {
       <AppBar position="static">
   <Toolbar variant="dense">
     <Typography variant="h6" color="inherit" component="div">
-      TreeVention
+      TreeView
     </Typography>
   </Toolbar>
 </AppBar>
