@@ -1,0 +1,16 @@
+{
+    "status": "SUCCESS",
+    "data": {
+        "items": [
+            {
+                "city": "Bellevue",
+                "state": "Washington",
+                "score": 70,
+                "stats": {
+                    "median_AQI": 45
+
+                }
+            }
+        ]
+    }
+}
