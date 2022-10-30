@@ -1,10 +1,16 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import { Typography, AppBar, Toolbar } from '@mui/material'
 
 export const Header = () => {
   return (
     <>
-      <Typography>Overall Impact of Tree Canopy Score</Typography>
+      <AppBar position="static">
+  <Toolbar variant="dense">
+    <Typography variant="h6" color="inherit" component="div">
+      TreeVention
+    </Typography>
+  </Toolbar>
+</AppBar>
     </>
   )
 }
