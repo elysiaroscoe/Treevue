@@ -15,13 +15,13 @@ export const Info = () => {
     <Typography>Overall Impact of Tree Canopy Score</Typography>
     <Section>
     <Image><AirIcon fontSize="large"/></Image>
-      <Typography>Air Quality</Typography>
+      <NameSection>Air Quality</NameSection>
       <InfoSection>Trees produce oxygen, capture air pollutants such as particulate matter directly on their leaves, improve public
 health, and reduce pollution indirectly by lowering air temperatures, reducing the formation of ozone. The existing tree canopy in Bellevue removes 1,023,583 tons of air pollution annually, valued at $39,183,439</InfoSection>
     </Section>
     <Section>
       <Image><VerifiedUserIcon fontSize="large"/></Image>
-      <Typography>Safety</Typography>
+      <NameSection>Safety</NameSection>
       <InfoSection>They find that for every 10 percent increase in
 tree canopy cover, there was a 15 percent decrease in the violent crime, and a 14 percent fall in the property crime
 rate. Trees, they write, can help to increase ‘eyes on the street’ through recreational use, reduce mental the fatigue
@@ -32,7 +32,7 @@ decrease in the violent crime rate and a 14 percent decrease the property crime 
     <Section>
       
       <Image><MedicalInformationIcon fontSize="large"/></Image>
-      <Typography>Heat Deaths</Typography>
+      <NameSection>Heat Deaths</NameSection>
       <InfoSection>Trees around our region can be scalded by 100+ degree heat and intense sun because they release as much water vapor through their leaves and needles as they can to survive. You can actually feel that cool vapor around a large tree when it’s extremely hot.
 “It actually creates a microclimate.”
 “It loses water vapor through the leaves in a process called ‘transpiration’ that cools the tree, and it cools the surroundings.”
@@ -41,12 +41,12 @@ The transpiration in trees works exactly the same way perspiration does for a pe
     </Section>
     <Section>
       <Image><HomeIcon fontSize="large"/></Image>
-      <Typography>Property Value</Typography>
+      <NameSection>Property Value</NameSection>
       <InfoSection>The proximity of healthy, beautiful trees directly affects property value. Good tree cover increased property prices by about 7% in residential areas and 18% for building lots. Quality landscapes with healthy trees can increase retail spending from 9 to 12%.</InfoSection>
     </Section>
     <Section>
       <Image><WaterIcon fontSize="large"/></Image>
-      <Typography>Storm Water and Water</Typography>
+      <NameSection>Storm Water and Water</NameSection>
       <InfoSection>Trees and forests mitigate stormwater runoff which minimizes flood risk, stabilizes soil, reduces sedimentation in
 streams and marshland, and absorbs pollutants, thus improving water quality and habitats.
 • On average, each acre of tree canopy in Bellevue absorbs 40,000 gallons of water. This benefit of avoided runoff is valued at roughly $360 per acre/per year. Extrapolated citywide, this means that Bellevue’s existing tree
@@ -54,7 +54,7 @@ canopy provides more than $2.8 million in stormwater runoff benefits.</InfoSecti
     </Section>
     <Section>
       <Image><ThermostatIcon fontSize="large"/></Image>
-      <Typography>Temperature</Typography>
+      <NameSection>Temperature</NameSection>
       <InfoSection>The net cooling effect of a young, healthy tree is equivalent to ten room-size air conditioners operating 20 hours a day. 
 If you plant a tree today on the west side of your home, in 5 years your energy bills should be 3% less. In 15 years the savings will be nearly 12%
 A mature tree can often have an appraised value of between $1,000 and $10,000. 
