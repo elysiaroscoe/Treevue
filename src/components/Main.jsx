@@ -9,12 +9,12 @@ import axios from "axios"
 const optionsList = ["Bellevue","Bridle Trails",	"Northwest Bellevue",	"BelRed",	"Downtown",	"Crossroads",	"Northeast Bellevue",	"Lake Hills",	"Wilburton",	"West Bellevue",	"Woodridge",	"West Lake Sammamish",	"Eastgate",	"Factoria",	"Newport",	"Somerset",	"Cougar Mountain / Lakemont"]
 export const Main = () => {
   
-  const [selectedNeighborhood, setSelectedNeighborhood] = useState("Bellevue")
-  const [queryData, setQueryData] = useState(undefined)
-
+  const [selectedNeighborhood, setSelectedNeighborhood] = useState("")
+  const [queryData, setQueryData] = useState(undefined )
+  
   const data = async (eventValue)=> {
     return await axios.get(`https://treevention.up.railway.app/suburb_rating?suburb=${eventValue}`)}
-  
+    
   const handleChange = async (event) => {
     setSelectedNeighborhood(event.target.value)
     const response = await data(event.target.value)
